@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #quizList {
+            margin-top: 20px;
+        }
+        .quiz-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .quiz-item button {
+            background-color: #dc3545;
+            border: none;
+            padding: 5px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .quiz-item button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Quiz Management</h1>
+    <form id="quizForm">
+        <h2>Create/Update Quiz</h2>
+        <input type="text" id="quizTitle" placeholder="Quiz Title" required>
+        <textarea id="quizQuestions" placeholder="Enter questions and answers (format: question|answer1,answer2|correctAnswer)" rows="10" required></textarea>
+        <button type="submit">Save Quiz</button>
+    </form>
+    <div id="quizList">
+        <h2>Existing Quizzes</h2>
+        <!-- Quiz items will be dynamically loaded here -->
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
